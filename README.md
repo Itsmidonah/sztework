@@ -1,5 +1,5 @@
 # sztework
-For all my szte work
+
 E-Commerce Application(O2 General mobile phones-webshop)
 This is an E-Commerce application built with Angular for the frontend and Node.js/Express for the backend. It allows users to browse products, add them to carts, place orders, and manage their profiles.
 Installation
