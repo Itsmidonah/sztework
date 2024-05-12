@@ -1,56 +1,53 @@
-<!-- user.component.html -->
-
 <div class="container">
-    <h2>Users</h2>
-  
-    <!-- Display Users -->
-    <ul *ngIf="users.length">
-      <li *ngFor="let user of users">
-        {{ user.username }} - {{ user.email }} - {{ user.role }}
-        <button (click)="selectUser(user)">Select</button>
-        <button (click)="deleteUser(user._id)">Delete</button>
-      </li>
-    </ul>
-  
-    <!-- Add User Form -->
-    <h3>Add User</h3>
-    <div>
-      <label for="newUsername">Username:</label>
-      <input type="text" id="newUsername" [(ngModel)]?="newUser.username" name="newUsername">
-      <br>
-      <label for="newEmail">Email:</label>
-      <input type="email" id="newEmail" [(ngModel)]?="newUser.email" name="newEmail">
-      <br>
-      <label for="newPassword">Password:</label>
-      <input type="password" id="newPassword" [(ngModel)]?="newUser.password" name="newPassword">
-      <br>
-      <label for="newRole">Role:</label>
-      <select id="newRole" [(ngModel)]?="newUser.role" name="newRole">
-        <option value="admin">Admin</option>
-        <option value="customer">Customer</option>
-        <option value="guest">Guest</option>
-      </select>
-      <br>
-      <button (click)="addUser()">Add User</button>
-    </div>
-  
-    <!-- Update User Form -->
-    <h3>Update User</h3>
-    <div *ngIf="selectedUser">
-      <label for="updateUsername">Username:</label>
-      <input type="text" id="updateUsername" [(ngModel)]?="updatedUser.username" name="updateUsername">
-      <br>
-      <label for="updateEmail">Email:</label>
-      <input type="email" id="updateEmail" [(ngModel)]?="updatedUser.email" name="updateEmail">
-      <br>
-      <label for="updateRole">Role:</label>
-      <select id="updateRole" [(ngModel)]?="updatedUser.role" name="updateRole">
-        <option value="admin">Admin</option>
-        <option value="customer">Customer</option>
-        <option value="guest">Guest</option>
-      </select>
-      <br>
-      <button (click)="updateUser()">Update User</button>
-    </div>
+  <h2>Users</h2>
+
+  <!-- Display Users -->
+  <ul *ngIf="users.length">
+    <li *ngFor="let user of users">
+      {{ user.username }} - {{ user.email }} - {{ user.role }}
+      <button (click)="selectUser(user)">Select</button>
+      <button (click)="deleteUser(user._id)">Delete</button>
+    </li>
+  </ul>
+
+  <!-- Add User Form -->
+  <h3>Add User</h3>
+  <div>
+    <label for="newUsername">Username:</label>
+    <input type="text" id="newUsername" [(ngModel)]="newUser.username" name="newUsername">
+    <br>
+    <label for="newEmail">Email:</label>
+    <input type="email" id="newEmail" [(ngModel)]="newUser.email" name="newEmail">
+    <br>
+    <label for="newPassword">Password:</label>
+    <input type="password" id="newPassword" [(ngModel)]="newUser.password" name="newPassword">
+    <br>
+    <label for="newRole">Role:</label>
+    <select id="newRole" [(ngModel)]="newUser.role" name="newRole">
+      <option value="admin">Admin</option>
+      <option value="customer">Customer</option>
+      <option value="guest">Guest</option>
+    </select>
+    <br>
+    <button (click)="addUser()">Add User</button>
   </div>
-  
+
+  <!-- Update User Form -->
+  <h3>Update User</h3>
+  <div *ngIf="selectedUser">
+    <label for="updateUsername">Username:</label>
+    <input type="text" id="updateUsername" [(ngModel)]="updatedUser.username" name="updateUsername">
+    <br>
+    <label for="updateEmail">Email:</label>
+    <input type="email" id="updateEmail" [(ngModel)]="updatedUser.email" name="updateEmail">
+    <br>
+    <label for="updateRole">Role:</label>
+    <select id="updateRole" [(ngModel)]="updatedUser.role" name="updateRole">
+      <option value="admin">Admin</option>
+      <option value="customer">Customer</option>
+      <option value="guest">Guest</option>
+    </select>
+    <br>
+    <button (click)="updateUser()">Update User</button>
+  </div>
+</div>

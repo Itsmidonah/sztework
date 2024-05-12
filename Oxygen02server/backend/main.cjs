@@ -1,4 +1,4 @@
-const { MainClass } = require('./MainClass.cjs');
+const { Main } = require('./main.cjs');
 
 const main = new MainClass();
 main.monitoringCallback((error, result) => {

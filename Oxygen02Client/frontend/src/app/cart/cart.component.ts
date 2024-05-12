@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+
   cartItems: any[] = [];
   products: any[] = [];
   newProduct: any = {};
@@ -97,6 +98,11 @@ export class CartComponent implements OnInit {
 
   selectProduct(product: any) {
     this.selectedProduct = product;
+  }
+
+  isAuthenticated(): boolean {
+    // Utilize the isAuthenticated method from AuthService
+    return this.authService.isAuthenticated();
   }
 }
 

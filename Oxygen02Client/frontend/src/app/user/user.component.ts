@@ -14,8 +14,10 @@ import { UserService } from '../user.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+[x: string]: any;
 
   users: any[] = [];
+  
   newUser: any = {};
   updatedUser: any = {};
   selectedUser: any = {};

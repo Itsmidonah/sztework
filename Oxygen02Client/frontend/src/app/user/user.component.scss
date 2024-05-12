@@ -1,42 +1,51 @@
-table {
+/* user.component.scss */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
   width: 100%;
-  margin-top: 20px;
-}
-
-th, td {
-  text-align: left;
   padding: 8px;
-}
-
-th {
-  background-color: #bbbbbb;
-  color: #333;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.table-container {
-  margin: 20px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  background-color: rgb(237, 100, 100);
-  width: 80%;
-  color: white;
-  padding: 10px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.login-form button:hover {
-  background-color: rgb(117, 54, 54);
+button:hover {
+  background-color: #0056b3;
 }
