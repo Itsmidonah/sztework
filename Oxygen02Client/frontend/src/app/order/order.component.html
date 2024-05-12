@@ -1,0 +1,55 @@
+<!--div class="order-container">
+  <h1>Your Order is <span class="highlight">Our Business! </span></h1>
+  <div class="order" *ngFor="let order of orders">
+    <p>Order ID: {{ order._id }}</p>
+    <p>Products:</p>
+    <ul>
+      <li *ngFor="let product of order.products">{{ product }}</li>
+    </ul>
+    <p>Total Price: {{ order.totalPrice }}</p>
+    <p>Shipping Address: {{ order.shippingAddress }}</p>
+    <p>Payment Details: {{ order.paymentDetails }}</p>
+    <p>Order Status: {{ order.orderStatus }}</p>
+    < Add buttons or controls for updating order status, etc.>
+  </div-->
+
+  <!-- Uncomment if needed -->
+  <!-- <ul class="order-list">
+    <li *ngFor="let order of orders">
+      Order ID: {{ order.id }} - Total: {{ order.total }}
+      <button class="delete-button" (click)="deleteOrder(order.id)">Delete</button>
+    </li>
+  </ul> -->
+
+  <!--h2>Add New Order</h2>
+  <div class="add-order-section">
+    <input class="add-order-input" type="text" placeholder="Order ID" [(ngModel)]="newOrder.id">
+    <input class="add-order-input" type="text" placeholder="Product" [(ngModel)]="newOrder.product">
+    < Add more input fields for other product details if needed >
+    <input class="add-order-input" type="number" placeholder="Total Price" [(ngModel)]="newOrder.totalPrice">
+    <input class="add-order-input" type="text" placeholder="Shipping Address" [(ngModel)]="newOrder.shippingAddress">
+    <input class="add-order-input" type="text" placeholder="Payment Details" [(ngModel)]="newOrder.paymentDetails">
+    <input class="add-order-input" type="text" placeholder="Order Status" [(ngModel)]="newOrder.orderStatus">
+    <button class="add-order-button" (click)="fetchOrders()">Add</button>
+  </div>
+</div-->
+
+<div class="order-container">
+ <h1>Your Order is <span class="highlight">Our Business! </span></h1>
+
+  <div *ngIf="orders.length > 0; else emptyOrders">
+    <div *ngFor="let order of orders; let i = index" class="order-item">
+      <div class="order-details">
+        <h3>{{ order.name }}</h3>
+        <p>Price: {{ order.price }}</p>
+        <p>Quantity: {{ order.quantity }}</p>
+      </div>
+      <button (click)="deleteOrder(i)">Remove</button>
+    </div>
+  </div>
+  
+  <ng-template #emptyOrders>
+    <p>No orders to display.</p>
+    <p>Sign Up, go to Carts and Place your order with us!.</p>
+  </ng-template>
+</div>

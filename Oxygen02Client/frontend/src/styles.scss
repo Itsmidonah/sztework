@@ -1,0 +1,55 @@
+/* I am adding my global styles to this file, and also import other style files */
+.container {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  h1 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav {
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .tab a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+  }
+  
+  .tab a:hover {
+    background-color: #ccc;
+  }
+  
+  .tab a.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  footer {
+    margin-top: 20px;
+  }
+  
+  .highlight {
+    color: #ff9900;
+  }
+  .login-button {
+    color: black;
+    background-color: white;
+  } 
+
+  .signup-button {
+    color: black;
+    background-color: white;
+  }
+  

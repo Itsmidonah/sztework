@@ -1,0 +1,38 @@
+/* login.component.scss */
+
+// Add your component-specific styles here
+:host {
+  display: block;
+}
+
+.login-container {
+  max-width: 400px; /* Set maximum width for the login container */
+  margin: 0 auto; /* Center the login container horizontally */
+  padding: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%; /* Set input width to 100% */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+button[type="submit"] {
+  width: 100%; /* Make the button span the full width */
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

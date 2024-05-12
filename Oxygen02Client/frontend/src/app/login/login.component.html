@@ -1,0 +1,35 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <!-- Login form fields -->
+      <input type="text" [(ngModel)]="username" placeholder="Username">
+      <input type="password" [(ngModel)]="password" placeholder="Password">
+      <button type="button" (click)="login()">Login</button>
+      <div *ngIf="error" class="error">{{ error }}</div>
+    </form>
+    <div class="signup-link">
+      
+      <p>If you're not already a user, please <a (click)="signup()">sign up</a>.</p>
+    </div>
+    
+  <form (ngSubmit)="login()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+     <!-- Confirm Password Section -->
+    <div class="confirm-password-section">
+      <label>Confirm Password:</label>
+      <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+    </div>
+    <!-- Submit Button -->
+    <button type="submit" (click)="submitForm()">Submit</button>
+    
+    </div>
+    <!--div *ngIf="error" class="error">{{ error }}</div>
+    <button type="submit">Login</button>
+  </form-->
+  

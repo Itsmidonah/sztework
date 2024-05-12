@@ -1,0 +1,37 @@
+<div>
+    <h2>Order Management</h2>
+    <div>
+      <h3>Add New Product</h3>
+      <form (ngSubmit)="addProduct()">
+        <label>
+          Name:
+          <input type="text" [(ngModel)]="newProduct.name" name="name" required>
+        </label>
+        <label>
+          Price:
+          <input type="number" [(ngModel)]="newProduct.price" name="price" required>
+        </label>
+        <label>
+          Quantity:
+          <input type="number" [(ngModel)]="newProduct.quantity" name="quantity" required>
+        </label>
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+    <div *ngIf="products.length > 0">
+      <h3>Products</h3>
+      <ul>
+        <li *ngFor="let product of products">
+          <div>
+            <span>Name: {{ product.name }}</span>
+            <span>Price: {{ product.price }}</span>
+            <span>Quantity: {{ product.quantity }}</span>
+            <button (click)="selectProduct(product)">Edit</button>
+            <button (click)="deleteProduct(product._id)">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  

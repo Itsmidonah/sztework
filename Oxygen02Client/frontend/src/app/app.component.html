@@ -1,0 +1,62 @@
+<router-outlet></router-outlet>
+<div class="container">
+<app-logo class="logo"></app-logo> 
+
+<div class="container">
+  <h1>Welcome to <span class="highlight">02 General Mobilephones & Accesories </span></h1>
+  
+  <h2> Oxygen. "Your number one-stop shop for all things phones. </h2>
+  <nav>
+    <div class="tab">
+      <a routerLink="/product" routerLinkActive="active">Products</a>
+    </div>
+    <div class="tab">
+      <a routerLink="/user" routerLinkActive="active">Users</a>
+    </div>
+    <div class="tab">
+      <a routerLink="/order" routerLinkActive="active">Orders</a>
+    </div>
+    <div class="tab">
+      <a routerLink="/cart" routerLinkActive="active">Cart</a>
+    </div>
+    <div class="tab">
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+    </div>
+  </nav>
+
+ <div>
+  <!-- Social media icons -->
+  <div class="social-icons">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+  </div>
+  
+</div>
+
+ <!-- Clickable router-outlet -->
+ <a routerLink="/login"> 
+  <router-outlet></router-outlet>
+</a>
+
+<a routerLink="/cart"> <!-- Navigate to cart page -->
+  <router-outlet></router-outlet>
+</a>
+
+<a routerLink="/product"> <!-- Navigate to products page -->
+  <router-outlet></router-outlet>
+</a>
+
+<!-- Container for pictures -->
+  <div class="picture-container">
+    <!-- Add your pictures here -->
+    <img src="assets/images/IMG-20240307-WA0010.jpg" alt="Image 1">
+    <!--img src="assets/images/IMG-20240307-WA0006.jpg" alt="Image 2"-->
+    <!-- Add more images as needed -->
+  </div>
+  
+</div>
+
+  <footer>
+    <p>Thank you for shopping at <span class="highlight">Kamuli's 02 Shop</span></p>
+  </footer>
+
